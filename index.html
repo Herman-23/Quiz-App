@@ -8,17 +8,27 @@
 </head>
 <body>
     <h1>My Quiz App</h1>
-    <p>Below is a question generator that will generate one of ten total questions all related to martial arts! Lets see how much you really know!</p>
+    <p>Below is a question generator that will generate one of ten total questions all related to martial arts! Let's see how much you really know!</p>
 
     <form class="quiz">
         <div id="quizContainer">
-            <button id="generateQuestion">Click to generate random question</button>
-            <p id="question"></p>
-            <ul id="multiplechoice">
-            </ul>
+            <button id="generateQuestion" type="button">Click to generate random question</button>
+            
+            <!-- Label for the questions which is hidden until first question generated -->
+            <label for="questions" id="questionLabel" aria-live="polite">Question:
+                <p id="questions"></p>
+            </label>
+            <!-- Using a fieldset since I am grouping related elements within the form -->
+            <fieldset>
+                <legend id="multipleChoiceHeading">Choose the correct response:</legend>
+                <!-- The ul will hold radio buttons for the multiple choice options -->
+                <ul id="multipleChoiceOptions"></ul>
+            </fieldset>
         </div>
         
+        <button id="submit" type="submit">Submit Answers</button>
     </form>
+    
     <script src="./index.js"></script>
 </body>
 </html>
