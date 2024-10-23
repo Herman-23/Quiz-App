@@ -1,0 +1,22 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: chocolate;
+}
+
+.quiz {
+    background-color: antiquewhite;
+    padding: 20px;
+}
+
+#generateQuestion {
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+#generateQuestion:hover {
+    background-color: rgb(11, 199, 11);
+}
